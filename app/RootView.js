@@ -1,7 +1,6 @@
 import 'es6-symbol/implement'
 import {Provider, connect} from 'react-redux';
 import React, {Component} from 'react';
-import {Container, Content, Tabs} from 'native-base';
 
 import store from './redux/store';
 import AppView from './views/AppView';
