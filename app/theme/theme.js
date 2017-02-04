@@ -22,7 +22,7 @@ export const Colors = {
   toolbarBg: palette.black,
   toolbar: palette.white,
 
-  background: palette.gray1,
+  background: palette.white,
   container: palette.gray4,
 
   accent: palette.green,
@@ -52,5 +52,7 @@ export const Colors = {
   warning: palette.yellow,
   danger: palette.red,
 
-  divider: palette.gray7
+  divider: palette.gray7,
+
+  selection: palette.green
 };

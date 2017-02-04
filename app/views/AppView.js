@@ -4,12 +4,12 @@ import 'es6-symbol/implement';
 import {connect} from 'react-redux';
 import React, {Component} from 'react';
 
-import TabView from './TabView';
+import MapView from './MapView';
 
 class AppView extends Component {
   render() {
     return (
-      <TabView />
+      <MapView />
     );
   }
 }

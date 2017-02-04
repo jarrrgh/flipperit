@@ -9,12 +9,7 @@ const Divider = React.createClass({
     style: View.propTypes.style
   },
   render() {
-    let combinedStyles = Object.assign({},
-      styles.divider,
-      this.props.style
-    );
-
-    return <View style={combinedStyles}/>;
+    return <View style={[styles.divider, this.propTypes.style]}/>;
   }
 });
 
