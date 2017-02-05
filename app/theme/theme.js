@@ -14,7 +14,19 @@ const palette = {
 
   yellow: '#ffde02',
   green: '#009900',
-  red: '#ff0033'
+  red: '#ff0033',
+
+  amber: '#FFC107',
+  amberLight: '#FFE082',
+  amberDark: '#FF6F00',
+
+  deepOrange: '#FF5722',
+  deepOrangeLight: '#FFAB91',
+  deepOrangeDark: '#BF360C',
+
+  lime: '#CDDC39',
+  limeLight: '#E6EE9C',
+  limeDark: '#827717'
 };
 
 export const Colors = {
@@ -54,5 +66,18 @@ export const Colors = {
 
   divider: palette.gray7,
 
-  selection: palette.green
+  listItemBody: palette.white,
+  listItemGood: palette.limeDark,
+  listItemGoodBg: palette.lime,
+  listItemGoodBody: palette.limeLight,
+  listItemNormal: palette.amberDark,
+  listItemNormalBg: palette.amber,
+  listItemNormalBody: palette.amberLight,
+  listItemBad: palette.deepOrangeDark,
+  listItemBadBg: palette.deepOrange,
+  listItemBodyBad: palette.deepOrangeLight,
+
+  selection: palette.green,
+
+  star: palette.white
 };

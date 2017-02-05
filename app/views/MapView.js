@@ -25,8 +25,8 @@ class MapView extends Component {
         >
         </Map>
         <View style={styles.search}>
+          <SearchResults offsetTop={80} offsetBottom={200} />
           <SearchBox style={styles.searchBox} />
-          <SearchResults />
         </View>
       </View>
     );
@@ -39,18 +39,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow'
   },
   map: {
-    flex: 1,
-    height: 100
+    flex: 1
   },
   search: {
     position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0,
-    paddingTop: 20
+    right: 0
   },
   searchBox: {
+    position: 'absolute',
+    top: 20,
+    bottom: 0,
+    left: 0,
+    right: 0,
   }
 });
 
