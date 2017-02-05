@@ -17,6 +17,7 @@ import SearchBox from '../components/SearchBox';
 import SearchResults from '../components/SearchResults';
 import * as MapActions from '../actions/MapActions';
 import * as SearchActions from '../actions/SearchActions';
+import {filterPins} from '../utils/filter';
 import {Colors} from '../theme/theme';
 
 import dismissKeyboard from 'react-native-dismiss-keyboard';
@@ -144,8 +145,8 @@ const styles = StyleSheet.create({
 export default connect(
   state => {
     const searchString = state.getIn(['map', 'searchString']);
-    let results = state.getIn(['pinball', 'pinballs']);
-    results = results.filter((pin) => pin.get('pinballName').startsWith(searchString));
+    const pins = state.getIn(['pinball', 'pinballs']);
+    const results = filterPins(pins, searchString);
 
     return {
       searchString,
