@@ -14,7 +14,8 @@ const SearchListItem = React.createClass({
     locationName: PropTypes.string,
     rating: PropTypes.number,
     date: PropTypes.string,
-    distance: PropTypes.number
+    distance: PropTypes.number,
+    onPress: PropTypes.func
   },
   getContainerStyle() {
     switch (this.props.rating) {
@@ -62,28 +63,26 @@ const SearchListItem = React.createClass({
     return (
       <TouchableOpacity
         style={[styles.container, this.getContainerStyle(), this.props.style]}
-        onPress={() => {console.log('press' + this.props.id)}}>
+        onPress={this.props.onPress}>
         <View style={styles.row}>
           <Text style={[styles.title, this.getTitleStyle()]}>{this.props.pinballName}</Text>
           <View style={styles.rating}>
-            <Rating value={this.props.rating} color={Colors.star} height={ROW_HEIGHT}/>
+            <Rating value={this.props.rating} color={Colors.star} height={20}/>
           </View>
         </View>
-        <View style={styles.row}>
-          <Text style={[styles.subtitle, this.getContainerStyle()]}>{this.props.locationName}</Text>
-          <Text style={[styles.distance, this.getContainerStyle()]}>{this.getFormattedDistance()}</Text>
+        <View style={[styles.row, {marginTop: 4}]}>
+          <Text style={[styles.subtitle, this.getBodyStyle()]}>{this.props.locationName}</Text>
+          <Text style={[styles.distance, this.getBodyStyle()]}>{this.getFormattedDistance()}</Text>
         </View>
       </TouchableOpacity>
     );
   }
 });
 
-const ROW_HEIGHT = 24;
-
 export const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
-    padding: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     margin: 8,
     marginBottom: 0,
     borderRadius: 4
@@ -91,11 +90,11 @@ export const styles = StyleSheet.create({
   title: {
     flex: 1,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   subtitle: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 14,
     color: Colors.listItemBody
   },
   rating: {
@@ -103,12 +102,11 @@ export const styles = StyleSheet.create({
     marginLeft: 8
   },
   distance: {
-    fontSize: 16,
+    fontSize: 14,
     marginLeft: 8,
     color: Colors.listItemBody
   },
   row: {
-    height: ROW_HEIGHT,
     flexDirection: 'row',
     alignItems: 'center'
   },

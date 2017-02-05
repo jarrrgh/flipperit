@@ -3,7 +3,7 @@
 import Immutable from 'immutable';
 
 const initialState = Immutable.fromJS({
-  test: 'test'
+  searchString: ''
 });
 
 // Reducer

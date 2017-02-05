@@ -3,7 +3,7 @@
 import React, {PropTypes} from 'react';
 import {StyleSheet,Text, View} from 'react-native';
 import {Colors} from '../theme/theme';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const starMapping = {1: 1, 2: 1.5, 3: 2, 4: 2.5, 5: 3};
 
@@ -37,12 +37,12 @@ const Rating = React.createClass({
       shades.push(this.renderStar(i, size, 'rgba(0, 0, 0, 0.05)'));
 
       if ((value - i) > 0.5) {
-        stars.push(this.renderStar(i, size, this.props.color, true));
-      } else if ((value - i) > 0) {
         stars.push(this.renderStar(i, size, this.props.color));
+      } else if ((value - i) > 0) {
+        stars.push(this.renderStar(i, size, this.props.color, true));
       }
     }
-    
+
     return (
       <View style={[styles.container, this.props.style]}>
         <View style={styles.row}>
