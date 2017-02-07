@@ -1,7 +1,7 @@
 /* @flow */
 
-export const SELECT_PIN = 'MapActions/SELECT_PIN';
-export const SET_RESULTS_VISIBILITY = 'MapActions/SET_RESULTS_VISIBILITY';
+export const SELECT_PIN = 'Map/SELECT_PIN';
+export const SET_RESULTS_VISIBILITY = 'Map/SET_RESULTS_VISIBILITY';
 
 export function selectPin(id) {
   return {

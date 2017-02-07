@@ -1,7 +1,7 @@
 /* @flow */
 
-export const FILTER = 'SearchActions/FILTER';
-export const CLEAR_RESULTS = 'SearchActions/CLEAR_RESULTS';
+export const FILTER = 'Search/FILTER';
+export const CLEAR_RESULTS = 'Search/CLEAR_RESULTS';
 
 export function filter(searchString) {
   return {

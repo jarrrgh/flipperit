@@ -1,8 +1,8 @@
 /* @flow */
 
 import Immutable from 'immutable';
-import * as MapActions from '../actions/MapActions';
-import * as SearchActions from '../actions/SearchActions';
+import * as MapActions from '../actions/map';
+import * as SearchActions from '../actions/search';
 
 const initialState = Immutable.fromJS({
   searchString: '',

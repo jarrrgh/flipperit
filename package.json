@@ -13,6 +13,7 @@
     "react-immutable-proptypes": "^2.1.0",
     "react-native": "0.41.1",
     "react-native-dismiss-keyboard": "^1.0.0",
+    "react-native-html-parser": "0.0.4",
     "react-native-immutable-list-view": "^0.2.3",
     "react-native-maps": "^0.13.0",
     "react-native-vector-icons": "^4.0.0",

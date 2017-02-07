@@ -1,6 +1,8 @@
 /* @flow */
 
 import Immutable from 'immutable';
+import {PARSE_PINS} from '../actions/api';
+import {parsePins} from '../utils/pinball';
 
 const initialState = Immutable.fromJS({
   pinballs: [
@@ -14,6 +16,9 @@ const initialState = Immutable.fromJS({
 
 export default function ContactStateReducer(state = initialState, action = {}) {
   switch (action.type) {
+    case PARSE_PINS:
+      parsePins(action.payload);
+      return state
     default:
       return state;
   }

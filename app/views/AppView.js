@@ -1,18 +1,24 @@
 /* @flow */
 
 import 'es6-symbol/implement';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import React, {Component} from 'react';
-
+import * as ApiActions from '../actions/api'
 import MapView from './MapView';
 
-class AppView extends Component {
+const AppView = React.createClass({
+  propTypes: {
+    dispatch: PropTypes.func
+  },
+  componentDidMount() {
+    this.props.dispatch(ApiActions.fetchPins());
+  },
   render() {
     return (
       <MapView />
     );
   }
-}
+});
 
 export default connect(
   state => ({

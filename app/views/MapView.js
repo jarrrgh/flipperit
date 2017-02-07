@@ -15,8 +15,8 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import SearchBox from '../components/SearchBox';
 import SearchResults from '../components/SearchResults';
-import * as MapActions from '../actions/MapActions';
-import * as SearchActions from '../actions/SearchActions';
+import * as MapActions from '../actions/map';
+import * as SearchActions from '../actions/search';
 import {filterPins} from '../utils/filter';
 import {Colors} from '../theme/theme';
 
